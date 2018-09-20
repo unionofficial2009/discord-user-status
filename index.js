@@ -46,7 +46,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Roles", `${(userroles..splice(0, 1)).map(a => a.name)}`)
+    .addField("Roles", `${(userroles.splice(0, 1)).map(a => a.name)}`)
     .setColor("#15Rolesf153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
