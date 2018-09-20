@@ -16,15 +16,15 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   
   let usergames ="";
         
-  let akusergames = usergames.find(`name`, "AK - Member");
-  let dnusergames = usergames.find(`name`, "DN - Member");
-  let gcusergames = usergames.find(`name`, "GC - Member");
-  let rousergames = usergames.find(`name`, "RO - Member");
+  //let akusergames = usergames.find(`name`, "AK - Member");
+  //let dnusergames = usergames.find(`name`, "DN - Member");
+  //let gcusergames = usergames.find(`name`, "GC - Member");
+  //let rousergames = usergames.find(`name`, "RO - Member");
   
-  if(akusergames) return usergames = usergames + "Aura Kingdom, ";
-  if(dnusergames) return usergames = usergames + "Dragon Nest, ";
-  if(gcusergames) return usergames = usergames + "Grand Chase, ";
-  if(rousergames) return usergames = usergames + "Ragnarok, ";
+  //if(akusergames) return usergames = usergames + "Aura Kingdom, ";
+  //if(dnusergames) return usergames = usergames + "Dragon Nest, ";
+  //if(gcusergames) return usergames = usergames + "Grand Chase, ";
+  //if(rousergames) return usergames = usergames + "Ragnarok, ";
   
   if(usergames=="") return usergames = usergames + "N/A, ";  
   
