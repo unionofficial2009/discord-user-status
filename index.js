@@ -8,37 +8,11 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
-    let guildroles = newMember.roles;
-    
- 
-    
+    let userroles = newMember.roles;
+        
     
   let bicon = newMember.user.displayAvatarURL;
   let bicon2 = bot.user.displayAvatarURL;  
-  
-  let usergames ="";
-        
-  //let akmemberRole  = newMember.guild.roles.find("name", "AK - Member");
-  //let dnusergames = usergames.find(`name`, "DN - Member");
-  //let gcusergames = usergames.find(`name`, "GC - Member");
-  //let rousergames = usergames.find(`name`, "RO - Member");
-  
-  //if(newMember.member.roles.has(akmemberRole.id)) {
-  //    usergames = usergames + "Aura Kingdom, ";
-  //}    
-  //if(dnusergames) {
-  //    usergames = usergames + "Dragon Nest, ";
-  //}    
-  //if(gcusergames) {
-  //    usergames = usergames + "Grand Chase, ";
-  //}    
-  //if(rousergames) {
-  //    usergames = usergames + "Ragnarok, ";
-  //}
-    
-  if(usergames == ""){ 
-      usergames = usergames + "N/A, ";  
-  }
     
     
     if(oldMember.presence.status == newMember.presence.status && newMember.presence.status == "offline"){
@@ -50,7 +24,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
         .addField("Username", `${newMember.user.username}`)
         .addField("Tag", `${newMember.user.tag}`)
         .addField("ID", `${newMember.user.id}`)
-        .addField("Roles", `${usergames}`)
+        .addField("Roles", `${userroles.map(a => a.name)}`)
         .setColor("#15f153")
         .setThumbnail(bicon)
         .addField("Status", `${newMember.user.presence.status} (invisible)`)
@@ -72,8 +46,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Roles", `${guildroles.map(a => a.name)}`)
-    //.addField("Roles", `${guildroles}`)
+    .addField("Roles", `${userroles.map(a => a.name)}`)
     .setColor("#15Rolesf153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
