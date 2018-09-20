@@ -8,7 +8,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
-    let guildroles = newMember.guild.roles;
+    //let guildroles = newMember.guild.roles;
     
     
   let bicon = newMember.user.displayAvatarURL;
@@ -16,12 +16,12 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   
   let usergames ="";
         
-  let akusergames = guildroles.find("name", "AK - Member");
+  let akmemberRole  = newMember.guild.roles.find("name", "AK - Member");
   //let dnusergames = usergames.find(`name`, "DN - Member");
   //let gcusergames = usergames.find(`name`, "GC - Member");
   //let rousergames = usergames.find(`name`, "RO - Member");
   
-  if(guildroles.has(akusergames.id)) {
+  if(newMember.member.roles.has(akmemberRole.id)) {
       usergames = usergames + "Aura Kingdom, ";
   }    
   //if(dnusergames) {
