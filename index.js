@@ -16,7 +16,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   
   let usergames ="";
         
-  let akmemberRole  = newMember.guild.roles.find("name", "AK - Member");
+  //let akmemberRole  = newMember.guild.roles.find("name", "AK - Member");
   //let dnusergames = usergames.find(`name`, "DN - Member");
   //let gcusergames = usergames.find(`name`, "GC - Member");
   //let rousergames = usergames.find(`name`, "RO - Member");
