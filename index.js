@@ -26,7 +26,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   //if(gcusergames) return usergames = usergames + "Grand Chase, ";
   //if(rousergames) return usergames = usergames + "Ragnarok, ";
   
-  if(usergames=="") return usergames = usergames + "N/A, ";  
+  //if(usergames=="") return usergames = usergames + "N/A, ";  
   
     
     
@@ -39,7 +39,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
         .addField("Username", `${newMember.user.username}`)
         .addField("Tag", `${newMember.user.tag}`)
         .addField("ID", `${newMember.user.id}`)
-        .addField("Games", `${usergames}`)
+        .addField("Games", `N/A`)
         .setColor("#15f153")
         .setThumbnail(bicon)
         .addField("Status", `${newMember.user.presence.status} (invisible)`)
@@ -61,7 +61,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Games", `${usergames}`)
+    .addField("Games", `N/A`)
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
