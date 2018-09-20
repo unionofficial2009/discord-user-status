@@ -27,7 +27,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   //if(rousergames) return usergames = usergames + "Ragnarok, ";
   
   if(usergames == ""){ 
-  return usergames = usergames + "N/A, ";  
+  usergames = usergames + "N/A, ";  
   }
     
     
