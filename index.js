@@ -26,8 +26,9 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   //if(gcusergames) return usergames = usergames + "Grand Chase, ";
   //if(rousergames) return usergames = usergames + "Ragnarok, ";
   
-  //if(usergames=="") return usergames = usergames + "N/A, ";  
-  
+  if(usergames == ""){ 
+  return usergames = usergames + "N/A, ";  
+  }
     
     
     if(oldMember.presence.status == newMember.presence.status && newMember.presence.status == "offline"){
