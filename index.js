@@ -17,22 +17,22 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   let usergames ="";
         
   let akusergames = usergames.find(`name`, "AK - Member");
-  let dnusergames = usergames.find(`name`, "DN - Member");
-  let gcusergames = usergames.find(`name`, "GC - Member");
-  let rousergames = usergames.find(`name`, "RO - Member");
+  //let dnusergames = usergames.find(`name`, "DN - Member");
+  //let gcusergames = usergames.find(`name`, "GC - Member");
+  //let rousergames = usergames.find(`name`, "RO - Member");
   
   if(akusergames) {
       usergames = usergames + "Aura Kingdom, ";
   }    
-  if(dnusergames) {
-      usergames = usergames + "Dragon Nest, ";
-  }    
-  if(gcusergames) {
-      usergames = usergames + "Grand Chase, ";
-  }    
-  if(rousergames) {
-      usergames = usergames + "Ragnarok, ";
-  }
+  //if(dnusergames) {
+  //    usergames = usergames + "Dragon Nest, ";
+  //}    
+  //if(gcusergames) {
+  //    usergames = usergames + "Grand Chase, ";
+  //}    
+  //if(rousergames) {
+  //    usergames = usergames + "Ragnarok, ";
+  //}
     
   if(usergames == ""){ 
       usergames = usergames + "N/A, ";  
@@ -48,7 +48,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
         .addField("Username", `${newMember.user.username}`)
         .addField("Tag", `${newMember.user.tag}`)
         .addField("ID", `${newMember.user.id}`)
-        .addField("Games", `N/A`)
+        .addField("Games", `usergames`)
         .setColor("#15f153")
         .setThumbnail(bicon)
         .addField("Status", `${newMember.user.presence.status} (invisible)`)
@@ -70,7 +70,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Games", `N/A`)
+    .addField("Games", `usergames`)
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
