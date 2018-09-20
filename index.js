@@ -8,7 +8,9 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
-    let guildroles = newMember.guild.member.id;
+    let guildroles = newMember.GuildMember.roles;
+    
+ 
     
     
   let bicon = newMember.user.displayAvatarURL;
