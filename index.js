@@ -16,12 +16,12 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   
   let usergames ="";
         
-  let akusergames = guildroles.find(`name`, "AK - Member");
+  let akusergames = guildroles.find("name", "AK - Member");
   //let dnusergames = usergames.find(`name`, "DN - Member");
   //let gcusergames = usergames.find(`name`, "GC - Member");
   //let rousergames = usergames.find(`name`, "RO - Member");
   
-  if(akusergames) {
+  if(guildroles.has(akusergames.id)) {
       usergames = usergames + "Aura Kingdom, ";
   }    
   //if(dnusergames) {
