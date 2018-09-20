@@ -8,7 +8,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
-    let guildroles = newMember.guild.member.roles;
+    let guildroles = newMember.guild.GuildMember.id;
     
     
   let bicon = newMember.user.displayAvatarURL;
@@ -70,8 +70,8 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Roles", `${guildroles.map(a => a.name)}`)
-    //.addField("Roles", `${guildroles}`)
+    //.addField("Roles", `${guildroles.map(a => a.name)}`)
+    .addField("Roles", `${guildroles}`)
     .setColor("#15Rolesf153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
