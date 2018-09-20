@@ -16,7 +16,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   
   let usergames ="";
         
-  let akusergames = usergames.find(`name`, "AK - Member");
+  let akusergames = guildroles.find(`name`, "AK - Member");
   //let dnusergames = usergames.find(`name`, "DN - Member");
   //let gcusergames = usergames.find(`name`, "GC - Member");
   //let rousergames = usergames.find(`name`, "RO - Member");
