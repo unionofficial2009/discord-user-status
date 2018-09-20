@@ -21,9 +21,9 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   //let gcusergames = usergames.find(`name`, "GC - Member");
   //let rousergames = usergames.find(`name`, "RO - Member");
   
-  if(newMember.member.roles.has(akmemberRole.id)) {
-      usergames = usergames + "Aura Kingdom, ";
-  }    
+  //if(newMember.member.roles.has(akmemberRole.id)) {
+  //    usergames = usergames + "Aura Kingdom, ";
+  //}    
   //if(dnusergames) {
   //    usergames = usergames + "Dragon Nest, ";
   //}    
@@ -70,7 +70,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Games", `${usergames}`)
+    .addField("Games", `${akmemberRole.name}`)
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
