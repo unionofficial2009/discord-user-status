@@ -14,6 +14,8 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     
     if(userrolessize == 0){
       
+        
+    userroles = "";    
     //let botembed = new Discord.RichEmbed()
     //.setDescription("Hello maam/sir welcome to UNION.")
     //.addField("Instructions", "Please proceed to **#welcome** channel in the **UNION HEADQUATERS** discord server. Kindly read and follow the rules/instructions in the **#welcome** channel to access the channels for specific game.")
