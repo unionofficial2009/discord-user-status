@@ -17,7 +17,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     
     if(userrolessize == 0){
         
-     userroles ="N/A";
+     userroles ="none";
         
     let botembed2 = new Discord.RichEmbed()
     .setDescription("Hello maam/sir welcome to UNION.")
