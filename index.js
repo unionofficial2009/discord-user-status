@@ -8,12 +8,12 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
-    let userroles = newMember.roles;
-    
-        
+    let userroles = ${newMember.roles.map(u=> `<@&${u.id}>`).join(", ")};
     
   let bicon = newMember.user.displayAvatarURL;
   let bicon2 = bot.user.displayAvatarURL;  
+    
+    
     
     
     if(userroles.length == 1){
@@ -37,7 +37,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
         .addField("Username", `${newMember.user.username}`)
         .addField("Tag", `${newMember.user.tag}`)
         .addField("ID", `${newMember.user.id}`)
-        .addField("Roles", `${userroles.map(u=> `<@&${u.id}>`).join(", ")}`)
+        .addField("Roles", `${userroles}`)
         .setColor("#15f153")
         .setThumbnail(bicon)
         .addField("Status", `${newMember.user.presence.status} (invisible)`)
@@ -59,7 +59,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Roles", `${userroles.map(u=> `<@&${u.id}>`).join(", ")}`)
+    .addField("Roles", `${userroles} - ${userroles.size}`)
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
