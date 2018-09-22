@@ -13,7 +13,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let userrolessize = newMember.roles.filter(uroles => uroles.name != "@everyone").size;
     
     if(userrolessize = 0){
-       userroles = "N/A"
+       
     } 
     
     
@@ -66,7 +66,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Roles", `${userroles} - ${userrolessize}`)
+    .addField("Roles", `${userroles}`)
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
