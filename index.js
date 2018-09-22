@@ -9,11 +9,24 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
     let userroles = newMember.roles;
+    
         
     
   let bicon = newMember.user.displayAvatarURL;
   let bicon2 = bot.user.displayAvatarURL;  
     
+    
+    if(userroles.length == 1){
+       let botembed = new Discord.RichEmbed()
+        .setDescription("Hello maam/sir welcome to UNION.")
+        .addField("Instructions", "Please proceed to **#welcome** channel in the **UNION HEADQUATERS** discord server. Kindly read and follow the rules/instructions in the **#welcome** channel to access the channels for specific game.")
+        .addField("Need Help?", "Any problem, please DM **@UNION President  @UNION Vice President @UNION Officers @UNION Human Resources**.")
+        .setColor("#15f153")
+        .setTimestamp()
+        .setFooter("UNION User Notifications",bicon2);
+   
+        newMember.send(botembed);
+    }   
     
     if(oldMember.presence.status == newMember.presence.status && newMember.presence.status == "offline"){
         
