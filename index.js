@@ -2,19 +2,18 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 
-let userStatus = [];
+
 bot.on("presenceUpdate", (oldMember, newMember) => {
+    let userStatus = [];
+    let userroles = "";
     let username = newMember.user.username;
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
     //let userroles = newMember.roles.filter(g => g.name != "@everyone").map(u=> `<@&${u.id}>`).join(", ");
-    let userroles = newMember.roles.map(u=> `<@&${u.id}>`).join(", ");
+    
     
     let userrolessize = newMember.roles.filter(uroles => uroles.name != "@everyone").size;
-    
-    if(userrolessize == 0){
-      
         
     //userroles = "";    
     //let botembed = new Discord.RichEmbed()
@@ -27,8 +26,6 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
    
     //newMember.send(botembed);    
         
-       
-    } 
     
     
     let bicon = newMember.user.displayAvatarURL;
@@ -36,8 +33,20 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     
       
     
+    if(userrolessize == 0){
+        
+     userroles ="N/A";
+            
+    } else {
+       
+    userroles = newMember.roles.filter(g => g.name != "@everyone").map(u=> `<@&${u.id}>`).join(", ");    
+            
+    }  
+    
     if(oldMember.presence.status == newMember.presence.status && newMember.presence.status == "offline"){
         
+        
+          
         
         
         let botembed = new Discord.RichEmbed()
