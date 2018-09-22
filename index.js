@@ -12,7 +12,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     
     let userrolessize = newMember.roles.filter(uroles => uroles.name != "@everyone").size;
     
-    if(userrolessize = 0){
+    if(userrolessize == 0){
       
     //let botembed = new Discord.RichEmbed()
     //.setDescription("Hello maam/sir welcome to UNION.")
