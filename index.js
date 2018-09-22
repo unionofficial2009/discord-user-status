@@ -8,12 +8,17 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let status = newMember.user.presence.status;
     // get a reference to all channels in the user's guild
     let guildChannels = newMember.guild.channels;
-    let userroles = newMember.roles.map(u=> `<@&${u.id}>`).join(", ");
+    let userroles = newMember.roles.filter(g => g.name != "@everyone").map(u=> `<@&${u.id}>`).join(", ");
     
     let userrolessize = newMember.roles.filter(uroles => uroles.name != "@everyone").size;
     
-  let bicon = newMember.user.displayAvatarURL;
-  let bicon2 = bot.user.displayAvatarURL;  
+    if(userrolessize = 0){
+       userroles = "N/A"
+    } 
+    
+    
+    let bicon = newMember.user.displayAvatarURL;
+    let bicon2 = bot.user.displayAvatarURL;  
     
     
     
