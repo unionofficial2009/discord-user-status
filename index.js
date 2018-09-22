@@ -1,8 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-
-
 bot.on("presenceUpdate", (oldMember, newMember) => {
     let userStatus = [];
     let userroles = "";
@@ -12,8 +10,6 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let userrolessize = newMember.roles.filter(uroles => uroles.name != "@everyone").size;
     let bicon = newMember.user.displayAvatarURL;
     let bicon2 = bot.user.displayAvatarURL;  
-    
-      
     
     if(userrolessize == 0){
         
@@ -36,11 +32,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     }  
     
     if(oldMember.presence.status == newMember.presence.status && newMember.presence.status == "offline"){
-        
-        
           
-        
-        
         let botembed = new Discord.RichEmbed()
         .setDescription(`<@${newMember.user.id}>`)
         .addField("Username", `${newMember.user.username}`)
@@ -85,7 +77,5 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
         
     }
 });
-  
-
 
 bot.login(process.env.BOT_TOKEN);
