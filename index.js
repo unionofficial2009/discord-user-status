@@ -10,6 +10,8 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     let guildChannels = newMember.guild.channels;
     let userroles = newMember.roles.map(u=> `<@&${u.id}>`).join(", ");
     
+    let userrolessize = newMember.roles.filter(uroles => uroles.name != "@everyone").size;
+    
   let bicon = newMember.user.displayAvatarURL;
   let bicon2 = bot.user.displayAvatarURL;  
     
@@ -59,7 +61,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
-    .addField("Roles", `${userroles} - ${userroles.length}`)
+    .addField("Roles", `${userroles} - ${userrolessize}`)
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Status", `${newMember.user.presence.status}`)
