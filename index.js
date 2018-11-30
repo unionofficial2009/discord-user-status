@@ -17,8 +17,8 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
         
     let botembed2 = new Discord.RichEmbed()
     .setDescription("Hello maam/sir welcome to UNION.")
-    .addField("Instructions", "Please proceed to **#welcome** channel in the **UNION HEADQUATERS** discord server. Kindly read and follow the rules/instructions in the **#welcome** channel to access the channels for specific game.")
-    .addField("Need Help?", "Any problem, please DM **@UNION President @UNION Vice President @UNION Officers @UNION Human Resources**.")
+    .addField("Instructions", "Please proceed to <#431171722167713842> channel in the **UNION HEADQUATERS** discord server. Kindly read and follow the rules/instructions in the <#431171722167713842> channel to access the channels for specific game.")
+    .addField("Need Help?", "Any problem, please DM <@&431159665758306306> <@&432820780020006922> <@&431159737162399754> <@&469013270557360129>.")
     .setColor("#15f153")
     .setTimestamp()
     .setFooter("UNION User Notifications",bicon2);
