@@ -35,6 +35,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
           
         let botembed = new Discord.RichEmbed()
         .setDescription(`<@${newMember.user.id}>`)
+        .addField("Display Name", `${newMember.displayName}`)
         .addField("Username", `${newMember.user.username}`)
         .addField("Tag", `${newMember.user.tag}`)
         .addField("ID", `${newMember.user.id}`)
@@ -57,6 +58,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   
     let botembed = new Discord.RichEmbed()
     .setDescription(`<@${newMember.user.id}>`)
+    .addField("Display Name", `${newMember.displayName}`)
     .addField("Username", `${newMember.user.username}`)
     .addField("Tag", `${newMember.user.tag}`)
     .addField("ID", `${newMember.user.id}`)
